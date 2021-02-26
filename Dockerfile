@@ -6,8 +6,9 @@ ARG GROUP_ID
 # Add dependencies here
 # Dependencies
 RUN apt update && apt install -y \
-    ibsm6 libxext6 \
-    libeigen3-dev
+    libsm6 \
+    libxext6 \
+    libgl1-mesa-glx
 
 # Simple root password in case we want to customize the container
 RUN echo "root:root" | chpasswd
